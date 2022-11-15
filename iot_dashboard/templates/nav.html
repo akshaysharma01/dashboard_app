@@ -1,0 +1,105 @@
+
+  <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+    <div class="container-fluid px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-1 px-0 me-sm-6 me-12">
+            <li class="breadcrumb-item"><a class="opacity-8 text-dark" href="javascript:;">Applications</a></li>
+            <li class="breadcrumb-item text-dark active" aria-current="page">
+              Release Apps
+            </li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav mx-auto">
+                {% if user.is_authenticated %}
+
+                <li class="nav-item">
+                    <a class="nav-link me-2" href="#">
+                      <i class="fas fa-user-circle text-dark me-2"></i>
+                      Welcome, {{user.username}}
+                    </a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="/">
+                    <i class="ni ni-lock-circle-open text-dark me-2"></i>
+                      Logout
+                  </a>
+                </li>     
+                <li class="nav-item">
+                  <a class="nav-link me-2" href="/about">
+                    <i class="ni ni-lock-circle-open text-dark me-2"></i>
+                      About
+                  </a>
+                </li>       
+             </ul>
+        </div>
+    </div>
+  </nav>
+
+<div class="col-md-4">
+    <!-- Button trigger modal -->
+    <button class="btn btn-icon btn-3 btn-outline-info" type="button" data-bs-toggle = "modal" data-bs-target="#exampleModalMessage">
+    <span class="btn-inner--icon"><i class="ni ni-fat-add"></i></span>
+    <span class="btn-inner--text">Add Device</span>
+  </button>
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalMessage" tabindex="-1" role="dialog" aria-labelledby="exampleModalMessageTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create a Device Profile</h5>
+            <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="card-header pb-0 text-left">
+                <p class="mb-0">Select your Device Type</p>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Device Type
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="javascript:;">Intel Addition</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Intel NUC</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Microsoft surface 6</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Microsoft surface Go</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Nvidia blackboard tx2</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Nvidia Jetson</a></li> 
+                </ul>
+              </div>
+              <div class="card-header pb-0 text-left">
+                <p class="mb-0">Select your Fleet Type</p>
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Fleet Type
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li><a class="dropdown-item" href="javascript:;">Starter</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Essentials</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Microservices</a></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn bg-gradient-primary">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-icon btn-3 btn-outline-info" type="button">
+
+  <span class="btn-inner--icon"><i class="fas fa-filter"></i></span>
+  <span class="btn-inner--text">Add filter</span>
+</button>
+  </div>
+
+

@@ -1,0 +1,44 @@
+
+  <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+    <div class="container-fluid px-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-1 px-0 me-sm-6 me-12">
+            <li class="breadcrumb-item"><a class="opacity-8 text-dark" href="javascript:;">Applications</a></li>
+            <li class="breadcrumb-item text-dark active" aria-current="page">
+              finbob-local
+            </li>
+            <li class="breadcrumb-item text-dark active" aria-current="page">
+              holy-bird
+            </li>
+          </ol>
+        </nav>
+        <div class="collapse navbar-collapse" id="navigation">
+              <ul class="navbar-nav mx-auto">
+                
+                {% if user.is_authenticated %}
+
+              <li class="nav-item">
+                  <a class="nav-link me-2" href="#">
+                    <i class="fas fa-user-circle text-dark me-2"></i>
+                    Welcome, {{user.username}}
+                  </a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link me-2" href="/">
+                    <i class="ni ni-lock-circle-open text-dark me-2"></i>
+                    Logout
+                  </a>
+              </li>
+
+              </ul>
+              
+            </div>
+        <div class="ms-md-auto ps-md-3 d-flex align-items-center">
+          <div class="bg-white border-radius-lg d-flex">
+            <input type="text" class="form-control border-0 ps-3" placeholder="Type here...">
+            <button class="btn bg-gradient-primary my-1 me-1">Search</button>
+          </div>
+        </div>
+    </div>
+  </nav>
